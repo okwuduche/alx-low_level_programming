@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc $CFILE -o rename_C_output
+gcc -c $CFILE
