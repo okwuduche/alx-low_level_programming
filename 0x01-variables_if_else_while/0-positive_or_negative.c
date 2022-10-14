@@ -13,6 +13,6 @@ int main(void)
 	int n;
 		srand(time(0));
 			n = rand() - RAND_MAX / 2;
-				printf("%i %i %i is positive", n);
+				printf("%i is a positive", n);
 				return (0);
 }
