@@ -15,7 +15,7 @@ int main(void)
 		for (set2 = set1 + 1; set2 <= 99; set2++)
 		{
 			putchar((set1 / 10) + '0');
-			putchar(set1 % 10) + '0');
+			putchar((set1 % 10) + '0');
 			putchar(' ');
 			putchar((set2 / 10) + '0');
 			putchar((set2 % 10) + '0');
