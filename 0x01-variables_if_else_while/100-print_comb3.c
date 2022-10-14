@@ -10,7 +10,7 @@ int main(void)
 {
 	int controlA, controlB;
 
-	for controlA = 0; controlA < 9; controlA++)
+	for (controlA = 0; controlA < 9; controlA++)
 	{
 		for (controlB = controlA + 1; controlB < 10; controlB++)
 		{
