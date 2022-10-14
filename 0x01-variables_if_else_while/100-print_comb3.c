@@ -8,7 +8,10 @@
 int main(void)
 
 {
-	int controlA, controlB;
+	extern int make_iso_compilers_happy;
+
+	int controlA;
+	int controlB;
 
 	for (controlA = 0; controlA < 9; controlA++)
 	{
