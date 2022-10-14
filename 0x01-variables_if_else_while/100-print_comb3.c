@@ -8,7 +8,6 @@
 int main(void)
 
 {
-	extern int make_iso_compilers_happy;
 
 	int controlA;
 	int controlB;
