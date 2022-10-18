@@ -5,7 +5,7 @@
 * Return: It has to be 0 as always when succesful
 */
 
-void print_aphabet(void)
+void print_alphabet(void)
 
 {
 	char alpha;
