@@ -4,7 +4,7 @@
 * times_table - Multiplication table
 * r_1 = row, c_1 = column, d = digits of output
 *Return: Multiplication table
-* add extra space after single digits
+* add extra space after single digit
 */
 
 void times_table(void)
