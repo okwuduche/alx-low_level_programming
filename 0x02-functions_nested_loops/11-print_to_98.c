@@ -36,7 +36,7 @@ void print_to_98(int num)
 	}
 	else
 	{
-		printf("98";
+	  printf("98");
 	}
 
 	printf("\n");
