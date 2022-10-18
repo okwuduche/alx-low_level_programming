@@ -23,7 +23,7 @@ int main(void)
 		}
 		else if ((i % 5) == 0)
 		{
-			total_of_5s = totao_of_5s + i;
+			total_of_5s = total_of_5s + i;
 		}
 	}
 	total = total_of_3s + total_of_5s;
