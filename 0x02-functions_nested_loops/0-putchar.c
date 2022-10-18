@@ -2,7 +2,7 @@
 
 /**
 * main - Putchar
-* Return: It has to return 0 if no error
+* Return: It has to return 0 if no error message
 */
 
 int main(void)
