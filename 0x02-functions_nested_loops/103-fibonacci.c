@@ -27,7 +27,7 @@ int main(void)
 		c = fib;
 	}
 
-	printf("%lu\n", total;
+	printf("%lu\n", total);
 
 	return (0);
 }
