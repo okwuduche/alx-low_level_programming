@@ -21,9 +21,9 @@ int main(void)
 		{
 			total_of_3s = total_of_3s + i;
 		}
-		else if ((i $ 5) == 0)
+		else if ((i % 5) == 0)
 		{
-			total_of_5s = totao_of_5s +i;
+			total_of_5s = totao_of_5s + i;
 		}
 	}
 	total = total_of_3s + total_of_5s;
