@@ -1,10 +1,9 @@
 #include "main.h"
-#define "MAIN_H"
 
 /**
-* main - Tests the integer
-* Return: Always 0
-*/
+  * main - Test function for positivity or negativity
+  * Return: 0
+  */
 
 int main(void)
 {
