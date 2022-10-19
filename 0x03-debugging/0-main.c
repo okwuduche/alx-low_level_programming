@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* main - Tests integer
+* main - Tests the integer
 * Return: Always 0
 */
 
