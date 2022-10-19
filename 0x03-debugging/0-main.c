@@ -1,15 +1,15 @@
 #include "main.h"
 
 /**
-  * main - Test function for positivity or negativity
-  * Return: 0
-  */
+* main - Tests the integer
+* Return: Always 0
+*/
 
 int main(void)
 {
 	int i;
 
-	i = 0;
-	positive_or_negative(i);
+	i = 98;
+	positive_or_negative(int, i);
 	return (0);
 }
