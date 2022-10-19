@@ -2,6 +2,7 @@
 
 /**
 * main - Tests the integer
+* @positive_or_negative
 * Return: Always 0
 */
 
