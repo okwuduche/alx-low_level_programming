@@ -1,17 +1,16 @@
 #include "main.h"
 
 /**
-* _isupper - This compares characters to see if uppercase or not
-* @c: Represents integer variable
-* Return: Always 1 when the if condition evaluates to True and 0 when False
-*/
+ * _isupper - checks is a character is uppercase
+ * @c: carrier integer variable
+ * Return: 1 if true, 0 if false
+ */
 
 int _isupper(int c)
-
 {
-	if (c >= &&c <= 90)
+	if (c >= 65 && c <= 90)
 	{
-	return (1);
+		return (1);
 	}
 	return (0);
 }
