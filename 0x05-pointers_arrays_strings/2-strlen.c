@@ -4,18 +4,18 @@
 
 /**
 * _strlen - Used to return lenght of a sring
-* @s: Represents string
+* @str: Represents string
 * Return: Lenght of string
 */
 
-int _strlen(char *s)
+int _strlen(char *str)
 
 {
-	size_t lenght = 0;
+	size_t len = 0;
 
-	while (*s++)
+	while (*str++)
 	{
-		lenght++;
+		len++;
 	}
-	return (lenght);
+	return (len);
 }
