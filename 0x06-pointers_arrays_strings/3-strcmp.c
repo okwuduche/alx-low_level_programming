@@ -8,13 +8,13 @@
 * Return: Returns according to the evaluation
 */
 
-int _strcmp(char *a1, char a2)
+int _strcmp(char *s1, char s2)
 {
-	while (*a1 && *a2 && *a1 == *a2)
+	while (*s1 && *s2 && *s1 == *s2)
 	{
-		a1++;
-		a2++;
+		s1++;
+		s2++;
 	}
 
-	return (*a1 - *a2);
+	return (*s1 - *s2);
 }
