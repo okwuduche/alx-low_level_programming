@@ -7,20 +7,17 @@
 */
 
 void print_number(int n)
-
 {
-	unsigned int fig = n;
+	unsigned int num = n;
 
 	if (n < 0)
 	{
-		_putchar('\n');
-		fig = fig;
+		_putchar('-');
+		num = -num;
 	}
 
-	if ((fig / 10) > 0)
-	{
-		print_number(fig / 10);
-	}
+	if ((num / 10) > 0)
+		print_number(num / 10);
 
-	_putchar((fig % 10) + '0');
+	_putchar((num % 10) + '0');
 }
