@@ -2,14 +2,15 @@
 #include "main.h"
 
 /**
-* rot13 - Used to encode rot13
+* rot13 - Encodes a string (Used to encode rot13)
 * @str: Sets of strings for encoding
-* Returns: Returns pointers to the encoded strings
+* Return: Returns pointers to the encoded strings
 */
 
 char *rot13(char *str)
 {
 	int position0 = 0, position1;
+
 	char alphabet[52] = {'A', 'B', 'C', 'D', 'E', 'F',
 				'G', 'H', 'I', 'J', 'K', 'L',
 				'M', 'N', 'O', 'P', 'Q', 'R',
