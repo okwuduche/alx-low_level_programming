@@ -7,24 +7,25 @@
 * Return: REturns the strings
 */
 
-unsigned in _strspn(char *s, char *accept)
-
+unsigned int _strspn(char *s, char *accept)
 {
-	unsigned in position, looper, tracker = 0;
+	unsigned int position, looper, tracker;
 
-	for (position = 0, s[position] != '\0'; looper++)
+	tracker = 0;
+	for (position = 0; s[position] != '\0'; position++)
 	{
 		for (looper = 0; accept[looper] != '\0'; looper++)
+		{
+			if (accept[looper] == s[position])
 			{
-				tracker = tracker + 1;
+				tracker++;
 				break;
 			}
-
+		}
 		if (accept[looper] != s[position])
 		{
 		break;
 		}
 	}
-
 	return (tracker);
 }
