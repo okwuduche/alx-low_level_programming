@@ -11,12 +11,12 @@
 
 int main(int argc, char *argv[])
 {
-	int mul = 0;
+	int multiplier = 0;
 
 	if (argc == 3)
 	{
-		mul = atoi(argv[1]) * atoi(argv[2]);
-		printf("%d\n", mul);
+		multiplier = atoi(argv[1]) * atoi(argv[2]);
+		printf("%d\n", multiplier);
 		return (0);
 	}
 	else
