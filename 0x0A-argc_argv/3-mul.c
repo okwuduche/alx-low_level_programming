@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 	if (argc == 3)
 	{
 		multiplier = atoi(argv[1]) * atoi(argv[2]);
-		printf("%d\n", mul);
+		printf("%d\n", multiplier)};
 		return (0);
 	}
 	else
