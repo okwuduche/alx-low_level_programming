@@ -1,52 +1,95 @@
 #include "main.h"
-#include <stdlib.h>
 
 /**
- * argstostr - concatenates all the arguments of a program.
- * @ac: argument count.
- * @av: argument vector.
+ * alloc - accates space in memory for an array
+ * @str: string
+ * @len: length of string
+ * @size: size of array
  *
- * Return: pointer of an array of char
+ * Return: a pointer to the array or null if allocation was unsucessful
  */
-char *argstostr(int ac, char **av)
+char **alloc(char *str, int len, int size)
 {
-	char *aout;
-	int c, i, j, ia;
+	int i, j, size2;
+	char **a, prev;
 
-	if (ac == 0)
-		return (NULL);
+	a = malloc((size + 1) * sizeof(char *));
+	prev = ' ';
 
-	for (c = i = 0; i < ac; i++)
+	for (i = 0; i < size; i++)
 	{
-		if (av[i] == NULL)
-			return (NULL);
-
-		for (j = 0; av[i][j] != '\0'; j++)
-			c++;
-		c++;
-	}
-
-	aout = malloc((c + 1) * sizeof(char));
-
-	if (aout == NULL)
-	{
-		free(aout);
-		return (NULL);
-	}
-
-	for (i = j = ia = 0; ia < c; j++, ia++)
-	{
-		if (av[i][j] == '\0')
+		while (j < len)
 		{
-			aout[ia] = '\n';
-			i++;
-			ia++;
-			j = 0;
+			if (str[j] == ' ' && prev != ' ')
+			{
+				prev = ' ';
+				j++;
+				break;
+			}
+			if (str[j] != ' ')
+				size2++;
+			prev = str[j];
+			j++;
 		}
-		if (ia < c - 1)
-			aout[ia] = av[i][j];
-	}
-	aout[ia] = '\0';
 
-	return (aout);
+		a[i] = malloc((size2 + 1) * sizeof(char));
+		if (a[i] == NULL)
+		{
+			return (NULL);
+		}
+		size2 = 0;
+	}
+	a[size] = NULL;
+
+	return (a);
+}
+
+/**
+ * strtow - splits a string into words
+ * @str: the string to split
+ *
+ * Return: a pointer to an array of strings or NULL if error
+ */
+char **strtow(char *str)
+{
+	char **a, prev = ' ';
+	int i, j = 0, k = 0, c = 0, len, size = 0;
+
+	if (str == NULL || strlen(str) == 0)
+		return (NULL);
+	len = strlen(str);
+	for (i = 0; i < len; i++)
+	{
+		if (str[i] != ' ')
+			c = 1;
+		if (str[i] != ' ' && prev == ' ')
+			size++;
+		prev = str[i];
+	}
+	a = alloc(str, len, size);
+	if (a == NULL || c == 0)
+		return (NULL);
+	prev = ' ';
+	for (i = 0; i < size; i++)
+	{
+		while (j < len)
+		{
+			if (str[j] == ' ' && prev != ' ')
+			{
+				prev = ' ';
+				j++;
+				break;
+			}
+			if (str[j] != ' ')
+			{
+				a[i][k] = str[j];
+				k++;
+			}
+			prev = str[j];
+			j++;
+		}
+		a[i][k] = '\0';
+		k = 0;
+	}
+	return (a);
 }
