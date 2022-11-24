@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_list - Function that prints elements of a list.
@@ -8,7 +9,7 @@
 
 size_t print_list(const list_t *h)
 {
-	unsigned int num = 0;
+	unsigned int integer = 0;
 
 	while (h)
 	{
@@ -17,7 +18,7 @@ size_t print_list(const list_t *h)
 		else
 			printf("[%d] %s\n", h->len, h->str);
 		h = h->next;
-		num++;
+		integer++;
 	}
-	return (num);
+	return (integer);
 }
