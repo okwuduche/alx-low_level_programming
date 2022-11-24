@@ -10,8 +10,8 @@
  *
  * Description: singly linked list node structure
  * for Coding project
-
 */
+
 typedef struct list_s
 {
 	char *str;
